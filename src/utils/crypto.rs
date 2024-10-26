@@ -1,4 +1,8 @@
-use p256::ecdsa::{VerifyingKey, signature::Verifier, Signature};
+#[cfg(feature = "p256")]
+use p256::ecdsa::{signature::Verifier, Signature, VerifyingKey};
+
+#[cfg(feature = "accelerated")]
+use p256_accelerated::ecdsa::{signature::Verifier, Signature, VerifyingKey};
 
 // verify_p256_signature_bytes verifies a P256 ECDSA signature
 // using the provided data, signature, and public key.
