@@ -9,16 +9,16 @@ edition = "2021"
 crate-type = ["lib"]
 
 [dependencies]
-hex          = "0.4"
-x509-parser  = "0.15.1"
-serde        = { version = "1.0", features = ["derive"] }
-serde_json   = "1.0"
-chrono       = "0.4"
-time         = "0.3.36"
+hex = "0.4"
+x509-parser = "0.15.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = "0.4"
+time = "0.3.36"
 
-p256         = { version = "0.13.2", optional = true }
-sha2         = { git = "https://github.com/RustCrypto/hashes.git" }
-sha3         = { git = "https://github.com/RustCrypto/hashes.git" }
+p256 = { version = "0.13.2", optional = true }
+sha2 = "0.10.8"
+sha3 = "0.10.8"
 
 [dependencies.p256_accelerated]
 package = "p256"
